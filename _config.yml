@@ -2,6 +2,9 @@ title: AlphaOmega Site
 description: Working site info
 theme: just-the-docs
 
+domain: CheetahChrome.github.io       # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
+baseurl: /AlphaOmega      # place folder name if the site is served in a subfolder
+
 url: https://CheetahChrome.github.io
 
 aux_links:
