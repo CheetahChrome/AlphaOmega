@@ -273,10 +273,12 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  activesupport (>= 6.0.6)
   github-pages (~> 227)
   jekyll (~> 3.9.2)
   jekyll-sass-converter (~> 1.5.2)
   just-the-docs (= 0.4.0.rc3)
+  rouge (>= 3.26.0)
   wdm (>= 0.1.0)
   webrick
 

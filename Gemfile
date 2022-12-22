@@ -9,3 +9,6 @@ gem "just-the-docs", "0.4.0.rc3" # currently the latest pre-release
 # gem "just-the-docs"            # the latest release - currently 0.3.3
 gem 'wdm', '>= 0.1.0' 
 gem 'webrick'
+#gem 'rescue', '>= 0.0.1'
+gem 'rouge', '>= 3.26.0'
+gem 'activesupport', '>= 6.0.6' 
