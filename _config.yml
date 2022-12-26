@@ -2,6 +2,8 @@ title: AlphaOmega Site
 description: Working site info
 theme: just-the-docs
 
+logo: "/assets/images/MomDad45_2.jpg"
+
 domain: CheetahChrome.github.io       # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
 baseurl: /AlphaOmega      # place folder name if the site is served in a subfolder
 
