@@ -35,34 +35,20 @@ gh_edit_branch: "main" # the branch that your docs is served from
 gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately
 
 collections_dir: documents
+
 # Define Jekyll collections
 collections:
-
-
-  # Define a collection named "tests", its documents reside in the "_tests" directory
   AZ204:
-     permalink: "/:collection/:path/"
+    permalink: "/:collection/:path/"
     output: true
 
   Git:
-     permalink: "/:collection/:path/"
+    permalink: "/:collection/:path/"
     output: true
 
-    just_the_docs:
-  # Define which collections are used in just-the-docs
+just_the_docs:
   collections:
-    # Reference the "tests" collection
     AZ204:
-      # Give the collection a name
-      name: AZ 204
-      # Exclude the collection from the navigation
-      # Supports true or false (default)
-      # nav_exclude: true
-      # Fold the collection in the navigation
-      # Supports true or false (default)
-      # nav_fold: true
-      # Exclude the collection from the search
-      # Supports true or false (default)
-      # search_exclude: true
+      name: Azure 204 Notes
     Git:
-      name: Git Tips
+      name: Git
