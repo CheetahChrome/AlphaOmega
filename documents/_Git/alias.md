@@ -1,5 +1,5 @@
 ---
-title: ET Motif Git Alias For Working with Remote Repository
+title: Git Alias
 layout: default
 ---
 
