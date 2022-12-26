@@ -48,10 +48,8 @@ collections:
     output: true
 
 just_the_docs:
-  # Define which collections are used in just-the-docs
   collections:
     AZ204:
-      # Give the collection a name
-      name: Azure 204
+      name: Azure 204 Notes
     Git:
-      name: Git Tips
+      name: Git

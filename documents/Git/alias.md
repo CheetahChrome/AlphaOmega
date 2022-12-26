@@ -1,3 +1,8 @@
+---
+title: ET Motif Git Alias For Working with Remote Repository
+layout: default
+---
+
 # Alias ET Motif
 These are aliases that have the ET motif. When getting items from `Origin\Main` one will do a `git phonehome` that does a fetch and merge. 
 The `git gohome` checkouts the main branch.
@@ -12,4 +17,4 @@ The `git gohome` checkouts the main branch.
 ```
 
 {: .warning }
-The command `callhome` is when you are on a different branch and want to merge the main into your working branch.
+The command `callhome` is used when one is on a different branch and one wants to merge the `main` into the working branch.
