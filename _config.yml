@@ -8,6 +8,7 @@ domain: CheetahChrome.github.io       # if you want to force HTTPS, specify the 
 baseurl: /AlphaOmega      # place folder name if the site is served in a subfolder
 
 url: https://CheetahChrome.github.io
+enable_copy_code_button: true
 
 aux_links:
   Template Repository: https://github.com/just-the-docs/just-the-docs-template
