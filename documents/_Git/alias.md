@@ -1,5 +1,5 @@
 ---
-title: Git Alias With ET Motif
+title: Alias With ET Motif
 layout: default
 ---
 
@@ -32,13 +32,13 @@ Once done with all work, if there are any untracked files use `git cleanhome` to
 {: .warning }
 The command `callhome` is used when one is on a different branch and one wants to merge the `main` into the working branch.
 
-```mermaid
+<div class="mermaid" markdown="0" >
 graph TD;
     A-->B;
     A-->C;
     B-->D;
     C-->D;
-```
+</div>
 
 Updated January 19, 2023
 {: .label .label-green }
