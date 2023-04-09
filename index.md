@@ -3,7 +3,6 @@ title: Home
 layout: home
 ---
 
-
 A developer's personal site which has some notes which I have run into many times. 
 
 `bundle exec jekyll serve`
@@ -14,36 +13,6 @@ Example warning box.
 ----
 
 Running Notes
-
-`jekyll serve`
-
-```mermaid
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-```
-<div class="mermaid" markdown="0" >
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-</div>
-```mermaid
-graph TD
-A[Client] -->|tcp_123| B(Load Balancer)
-B -->|tcp_456| C[Server1] 
-B -->|tcp_456| D[Server2]
-```
-<div class="mermaid" markdown="0" >
-graph TD
-A[Client] -->|tcp_123| B(Load Balancer)
-B -->|tcp_456| C[Server1] 
-B -->|tcp_456| D[Server2]
-</div>
- [Just the Docs] theme. 
 
 ----
 

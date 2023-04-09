@@ -2,7 +2,6 @@
 title: Directive - NGModel
 layout: default
 ---
-
 ## Angular ngModel directive
 
 In Angular, `ngModel` is a directive used to create a **two-way data binding** between a form control element and a property on a component class. 
