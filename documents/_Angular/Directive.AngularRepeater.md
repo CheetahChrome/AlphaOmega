@@ -7,7 +7,8 @@ layout: default
 
 In Angular, repeater directives are a set of directives that allow you to repeat a portion of a template over a collection of items. 
 
-<p class="warning">Remember each of these commands must have a `*` in front of them</p>
+{: .warning }
+Remember each of these commands must have a `*` in front of them
 
 The most commonly used repeater directives are:
 
