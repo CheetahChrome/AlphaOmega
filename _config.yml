@@ -51,7 +51,6 @@ collections:
   NetCore:
     permalink: "/:collection/:path/"
     output: true   
-
 just_the_docs:
   collections:
     Angular:
@@ -60,4 +59,3 @@ just_the_docs:
       name: Git
     NetCore:
       name: Net Core
-
