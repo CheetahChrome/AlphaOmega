@@ -6,6 +6,10 @@ layout: home
 
 A developer's personal site which has some notes which I have run into many times. 
 
+`bundle exec jekyll serve`
+
+{: .warning }
+Example warning box.
 
 ----
 
@@ -41,8 +45,7 @@ B -->|tcp_456| D[Server2]
 </div>
  [Just the Docs] theme. 
 
-{: .warning }
-Example warning box.
+
 
 ----
 
