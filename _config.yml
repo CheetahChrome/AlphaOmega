@@ -38,13 +38,16 @@ gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into t
 
 collections_dir: documents
 exclude: 
-    - git/
+  - git/
 
 # Define Jekyll collections
 collections:
   Angular:
     permalink: "/:collection/:path/"
-    output: true        
+    output: true  
+  Architecture:
+    permalink: "/:collection/:path/"
+    output: true            
   Git:
     permalink: "/:collection/:path/"
     output: true
@@ -55,6 +58,8 @@ just_the_docs:
   collections:
     Angular:
       name: Angular
+    Architecture:
+      name: Architecture      
     Git:
       name: Git
     NetCore:
