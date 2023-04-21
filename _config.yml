@@ -38,6 +38,10 @@ gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into t
 
 collections_dir: documents
 
+# Comment out this section if pushing to github.
+# Uncomment for local.
+# exclude: 
+#   - git/
 
 # Define Jekyll collections
 collections:
@@ -53,6 +57,9 @@ collections:
   NetCore:
     permalink: "/:collection/:path/"
     output: true   
+  Node:
+    permalink: "/:collection/:path/"
+    output: true       
 just_the_docs:
   collections:
     Angular:
@@ -63,3 +70,5 @@ just_the_docs:
       name: Git
     NetCore:
       name: Net Core
+    Node:
+      name: Node.Js      
