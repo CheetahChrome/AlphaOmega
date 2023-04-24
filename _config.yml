@@ -56,8 +56,11 @@ collections:
     output: true
   NetCore:
     permalink: "/:collection/:path/"
-    output: true   
+    output: true 
   Node:
+    permalink: "/:collection/:path/"
+    output: true       
+  NoSQL:
     permalink: "/:collection/:path/"
     output: true       
 just_the_docs:
@@ -71,4 +74,6 @@ just_the_docs:
     NetCore:
       name: Net Core
     Node:
-      name: Node.Js      
+      name: Node.Js  
+    NoSQL:
+      name: No SQL            
