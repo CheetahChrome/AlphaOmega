@@ -1,7 +1,7 @@
--
+---
 title: Database Scaling
 layout: default
--
+---
 # Database Scaling
 Database scaling, particularly in distributed systems, often faces challenges related to consistency. Consistency is the property that ensures all database nodes provide the same view of the data, which is essential for maintaining data integrity and correctness. However, achieving consistency while scaling databases introduces several issues:
 
