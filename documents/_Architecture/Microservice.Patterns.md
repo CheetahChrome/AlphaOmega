@@ -25,6 +25,6 @@ Here's a summarized overview of some common microservices architecture design pa
 
 1. Service Decomposition - Breaking each into loosely coupled services per business need
 2. Command Query Responsibility Segregation -  Seperate read/write operations within the business needs.
-3. Saga pattern where needed.  
+3. Saga pattern where needed - into  smaller work flows. 
 4. Durable functions - stateful workflows.
   
