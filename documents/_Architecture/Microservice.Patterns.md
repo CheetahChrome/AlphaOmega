@@ -20,3 +20,11 @@ Here's a summarized overview of some common microservices architecture design pa
 | Choreography and Orchestration | In event-driven systems, choreography involves services collaborating by publishing and reacting to events, while orchestration involves a central component coordinating the interactions between services.|
 | Bulkhead Pattern | Isolate failures in one part of the system from affecting others. This involves dividing the application into isolated sections (bulkheads) that have their own resources and dependencies. |
 | Polyglot Persistence | Use different data storage technologies depending on the needs of each microservice. |
+
+### Interview Notes
+
+1. Service Decomposition - Breaking each into loosely coupled services per business need
+2. Command Query Responsibility Segregation -  Seperate read/write operations within the business needs.
+3. Saga pattern where needed.  
+4. Durable functions - stateful workflows.
+  
