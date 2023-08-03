@@ -3,7 +3,7 @@ title: SB - Service Bus Overview
 layout: default
 ---
 # Azure Service Bus Overview
-| Topic | Description |
+| Topic | Overview |
 |-|-|
 | What is Azure Service Bus? | Azure Service Bus is a cloud-based messaging service provided by Microsoft Azure. It enables reliable and asynchronous communication between applications and services. Service Bus supports two main communication patterns: queuing and publish/subscribe messaging. |
 | Messaging Patterns | Service Bus supports two main messaging patterns: 1) **Queue-based Messaging**: In this pattern, messages are sent to a queue and then processed by a single receiver. This ensures reliable and ordered message processing. 2) **Topic-based Messaging**: In this pattern, messages are published to a topic, and multiple subscribers can receive copies of the messages based on their subscriptions. Topic-based messaging allows for decoupling of publishers and subscribers. |
