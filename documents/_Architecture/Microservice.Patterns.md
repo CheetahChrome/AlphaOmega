@@ -6,9 +6,9 @@ layout: default
  
 Here's a summarized overview of some common microservices architecture design patterns:
 
-| Design Pattern | Description |
-|-|-|
-| Service Decomposition | Divide the application into small, loosely coupled services, each responsible for a specific business capability. |
+| Service Pattern | Overview |
+|--|--|
+|Service Decomposition | Divide the application into small, loosely coupled services, each responsible for a specific business capability. |
 | API Gateway | Implement a single entry point for clients to interact with multiple microservices. |
 | Service Registry and Discovery | Use a central service registry to allow services to register themselves and discover other services dynamically. |
 | Load Balancing | Distribute incoming requests across multiple instances of a service to ensure even utilization of resources. |
