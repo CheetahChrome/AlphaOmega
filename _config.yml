@@ -60,7 +60,7 @@ collections:
   Node:
     permalink: "/:collection/:path/"
     output: true       
-  NoSQL:
+  Tech:
     permalink: "/:collection/:path/"
     output: true       
 just_the_docs:
@@ -76,4 +76,6 @@ just_the_docs:
     Node:
       name: Node.Js  
     NoSQL:
-      name: No SQL            
+      name: No SQL    
+    Tech:
+      name: Tech       
