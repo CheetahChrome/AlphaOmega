@@ -1,5 +1,5 @@
 ---
-title: Typesript Notes
+title: Oh My Posh Powershell Notes
 layout: default
 ---  
   
