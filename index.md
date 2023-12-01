@@ -5,10 +5,14 @@ layout: home
 
 A developer's personal site which has some notes which I have run into many times. 
 
+[Git Actions For Project](https://github.com/CheetahChrome/AlphaOmega/actions)
+
+---
+
+#### Misc Notest and Links
+
 `bundle exec jekyll serve`[^1]
 
-{: .warning }
-Example warning box.
 
 
 
@@ -23,7 +27,10 @@ Running Notes
 - [use this template](https://github.com/just-the-docs/just-the-docs-template/generate)
 
 
-
 [^1]: [It can take up to 10 minutes for changes to your site to publish after you push the changes to GitHub](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll#creating-your-site).
+
+
+{: .warning }
+Index to the left. Find what you need. 
 
 
