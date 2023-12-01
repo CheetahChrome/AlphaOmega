@@ -12,11 +12,9 @@ enable_copy_code_button: true
 
 aux_links:
   Template Repository: https://github.com/just-the-docs/just-the-docs-template
-  OmegaCoder: http://omegacoder.com
 
 mermaid:
   version "9.3.0"
-
 
 callouts:
 # the colors grey-lt, grey-dk, purple, blue, green, yellow, and red are predefined;
@@ -39,9 +37,9 @@ gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into t
 collections_dir: documents
 
 # Comment out this section if pushing to github.
-# Uncomment for local.
-# exclude: 
-#   - git/
+# Uncomment for local. (divided by 0 included in default.html)
+exclude: 
+  - git/
 
 # Define Jekyll collections
 collections:
@@ -79,3 +77,4 @@ just_the_docs:
       name: No SQL    
     Tech:
       name: Tech       
+    
