@@ -38,8 +38,8 @@ collections_dir: documents
 
 # Comment out this section if pushing to github.
 # Uncomment for local. (divided by 0 included in default.html)
-exclude: 
-  - git/
+# exclude: 
+#   - git/
 
 # Define Jekyll collections
 collections:
