@@ -73,8 +73,6 @@ just_the_docs:
       name: Net Core
     Node:
       name: Node.Js  
-    NoSQL:
-      name: No SQL    
     Tech:
       name: Tech       
     
