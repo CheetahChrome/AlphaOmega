@@ -9,6 +9,7 @@ Here are my raw notes to get Oh-My-Posh working with Terminal and Powershell.
 - `winget install Microsoft.WindowsTerminal`
 - `winget install oh-my-posh`
 - `Install-Module posh-git -Scope CurrentUser`
+- `Install-Module -Name Terminal-Icons -Repository PSGallery`
 - Install [Nerd Fonts](https://www.nerdfonts.com/font-downloads)
 - `Test-Path $Profile`
 - `New-Item -Path $Profile -Type File -Force`
