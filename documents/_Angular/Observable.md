@@ -1,10 +1,11 @@
 ---
-title: Angular Observable
+title: RxJS Observable
 layout: default
 ---
-# Angular Observable
+# Reactive Extension - Observable
 
-In Angular, an RxJS Observable is a powerful tool for managing asynchronous data streams. An Observable is essentially a sequence of data items that are emitted over time. These data items can be of any type, and they can be emitted at any time.
+`Observable` is a core part of the RxJS (Reactive Extensions for JavaScript) library, which is used for handling asynchronous operations and event-based programming. Observables represent a sequence of values over time, and they are a fundamental part of Angular's approach to handling data streams, such as HTTP requests, user inputs, and other asynchronous events. These data items can be of any type, and they can be emitted at any time.
+
 
 Here are some key points to keep in mind when working with Observables in Angular:
 

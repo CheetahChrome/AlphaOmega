@@ -1,5 +1,5 @@
 ---
-title: NG Generate
+title: CLI NG Generate
 layout: default
 ---
 # NG Generate
