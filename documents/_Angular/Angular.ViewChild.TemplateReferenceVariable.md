@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular ViewChild Template Reference Variable"
+title: "Binding ViewChild Template Reference Variable"
 date: 12-07-2023
 categories: [Angular, Template Reference Variable]
 ---
