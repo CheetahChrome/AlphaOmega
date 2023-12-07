@@ -24,17 +24,5 @@ For example, if you generate a component named `example`, you'll get these files
 - `example.component.spec.ts`
 
 
-## Template Reference Variables in Angular
 
-In Angular, a Template Reference Variable is a way of capturing a reference to a specific element, directive, or component instance within a template. This can be useful when you want to use the properties or methods of a specific element or component within your template.
-
-Template Reference Variables are declared using the hash (`#`) symbol followed by the variable name. Once declared, they can be used elsewhere in the template.
-
-Here's an example:
-
-```html
-<input #myInput type="text">
-<button (click)="myInput.focus()">Focus the input</button>
-```
-In this example, `#myInput` is a Template Reference Variable. It captures a reference to the input element. Then, in the button's click event, we use myInput.focus() to set focus to the input element.
 
