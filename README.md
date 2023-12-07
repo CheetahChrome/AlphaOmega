@@ -1,4 +1,6 @@
-#Published Site
+# Published Site
+
+This is a personal developer's notes on tech topics.
 
 [AlphaOmega](https://cheetahchrome.github.io/AlphaOmega/)
 
