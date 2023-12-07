@@ -15,7 +15,7 @@ Angular provides several built-in pipes for common data transformations, and you
 | DatePipe      | Formats dates into various formats. | `<p>{{ currentDate | date:'short' }}</p>` |
 | UpperCasePipe | Transforms text to all upper case | `<p>{{ 'Hello, World!' | uppercase }}</p>`|
 | DecimalPipe   | Transforms a number into a string with a decimal point, formatted according to locale rules | `{{ 12345.6789 | number:'1.2-2' }}`|
-| CurrencyPipe  | Transforms a number to a currency string, formatted according to locale rules | `{{ 1234.56 | currency:'USD'\:'symbol':'1.2-2' }}` |
+| CurrencyPipe  | Transforms a number to a currency string, formatted according to locale rules | `{{ 1234.56 | currency:'USD':'symbol':'1.2-2' }}` |
 | SlicePipe     | Extracts a portion of an array or string. | `{{ 'Angular' | slice:0:3 }}` |
 | AsyncPipe     | Handles asynchronous data, such as Observables.  | `{{ asyncData$ | async }}`|
 | LowerCasePipe | Transforms text to all lower case |
