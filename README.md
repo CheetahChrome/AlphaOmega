@@ -1,3 +1,12 @@
+# Published Site
+
+This is a personal developer's notes on tech topics.
+
+[AlphaOmega](https://cheetahchrome.github.io/AlphaOmega/)
+
+
+---
+
 # just-the-docs-template
 
 This is a *bare-minimum* template to create a [Jekyll] site that is:
