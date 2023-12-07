@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Angular ViewChild Template Reference Variable
-date: 2023-12-0107
+title: "Angular ViewChild Template Reference Variable"
+date: 12-07-2023
 categories: [Angular, Template Reference Variable]
 ---
 
 ## Template Reference Variables in Angular
 
-A Template Reference Variable is a type of object known as a "ViewChild." ViewChild is a decorator that allows you to access a reference to an element or directive in the view template and interact with it in your component code. Hence it is a way of capturing a reference to a specific element, directive, or component instance within a template. This can be useful when you want to use the properties or methods of a specific element or component within your template.
+In Angular, a Template Reference Variable (TRV) is a type of object known as a "ViewChild." ViewChild is a decorator that allows you to access a reference to an element or directive in the view template and interact with it in your component code. The TRV is a way of capturing a reference to a specific element, directive, or component instance within a template. This can be useful when you want to use the properties or methods of a specific element or component within your template.
 
 Template Reference Variables are declared using the hash (`#`) symbol followed by the variable name. Once declared, they can be used elsewhere in the template.
 
@@ -15,7 +15,7 @@ Here's an example:
 
 ```html
 <input #myInput type="text">
-<button (click)="myInput.focus()">Focus the input</button>git st
+<button (click)="myInput.focus()">Focus the input</button>
 ```
 In this example, `#myInput` is a Template Reference Variable. It captures a reference to the input element. Then, in the button's click event, we use myInput.focus() to set focus to the input element.
 

@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Angular Property Binding
-date: 2022-10-01
 categories: [Angular, Property Binding]
 ---
 
