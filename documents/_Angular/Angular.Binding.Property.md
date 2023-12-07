@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Angular Property Binding
+title: Binding Property Binding
 categories: [Angular, Property Binding]
 ---
 

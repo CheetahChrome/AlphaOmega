@@ -1,5 +1,5 @@
 ---
-title: Angular Interpolation
+title: Binding Interpolation
 layout: default
 ---
 # Angular Interpolation
