@@ -43,3 +43,21 @@ The `ngModel` directive can also be used with other directives, such as `ngIf` o
 ```
 
 In this example, the `ngFor` directive is used to loop through an array of items and create a form input and delete button for each one. The `ngIf` directive is used to conditionally show the input element only if the visible property of the item is true. The ngModel directive is used to bind the value of the input element to the name property of the item.
+
+
+## Bootstrap Property in Angular
+
+The `bootstrap` property in Angular is part of the `@NgModule` decorator's metadata. It tells Angular which component(s) should be loaded when the application starts. 
+
+Typically, this is the root component of your application, and it should contain the application's main view, also known as the host view. The selected component will be inserted into the `index.html` host web page inside the `app-root` selector (or whatever selector you've defined for the root component).
+
+Here's an example:
+
+```typescript
+@NgModule({
+  declarations: [AppComponent],
+  imports: [BrowserModule],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
