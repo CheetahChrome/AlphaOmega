@@ -48,7 +48,10 @@ collections:
     output: true  
   Architecture:
     permalink: "/:collection/:path/"
-    output: true            
+    output: true 
+  Data:
+    permalink: "/:collection/:path/"
+    output: true                
   Git:
     permalink: "/:collection/:path/"
     output: true
@@ -66,7 +69,9 @@ just_the_docs:
     Angular:
       name: Angular
     Architecture:
-      name: Architecture      
+      name: Architecture   
+    Data:
+      name: Data          
     Git:
       name: Git
     NetCore:
