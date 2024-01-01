@@ -2,6 +2,12 @@
 title: ZNotes 
 layout: default
 ---
+
+# Commands
+
+`ng build --configuration=production`
+
+
 # RxJS vs NgRx
 
 ## Angular Component Files
