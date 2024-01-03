@@ -28,3 +28,4 @@ Pyramid (Top to bottom)
 The expected/intended workload of a database is key when designing a database schema and choosing the proper modeling technique.
 
 Databases are created for different types of use case. This means that different databases are used in different ways. Data Vault is a modeling technique that optimizes the database for flexible, long-term storage of historical data.
+
