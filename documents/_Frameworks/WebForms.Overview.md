@@ -5,7 +5,7 @@ title: WebForms
 
 ### State Management
 | State Management Technique | Description |
-| -------------------------- | ----------- |
+| - | - | 
 | ViewState | ViewState is a hidden field that is encoded and sent to the client browser along with the HTML markup. When the page is posted back to the server, the server can then decode the ViewState and restore the state of the page and its controls. |
 | Control State | Control State is used to persist information that is specific to a control and cannot be turned off like ViewState. |
 | Hidden Fields | Hidden Fields are used to store information on the page without displaying it to the user. |
@@ -13,6 +13,7 @@ title: WebForms
 | Query Strings | Query Strings are used to store data in the URL, but are visible to the user and have size limitations. |
 | Application State | Application State is a global storage mechanism accessible from all sessions, but can increase memory usage. |
 | Session State | Session State is used to store data related to a user's session, and is accessible from all pages within the session. |
+
 
 ### Drawbacks
 
