@@ -10,7 +10,8 @@ title: Asp.Net Differences
 | Controller            | Code-behind files linked to ASPX pages.           | Separate controllers handle user input.   |
 | Routing               | Based on physical file paths.                     | Based on controller actions.              |
 | State Management      | ViewState for maintaining state.                  | Minimal use of state; relies on models.   |
-| HTML Control          | Server controls that post back.                   | HTML helpers and partial views.           |
+| HTML Control          | Server controls that post back.                   | HTML helpers and partial views.<br/><br/>A partial view in MVC is a specific type of Razor view that renders a portion of the HTML content in another view. It's used to break down complex views into smaller, reusable components. Unlike regular views, partial views do not run on their own; they need to be called from other views or controllers.<br/>This helps in maintaining clean and DRY (Don't Repeat Yourself) code by avoiding duplication. Partial views are ideal for reusable UI components like navigation menus, forms, or widgets across different views in an MVC application.
+           |
 | Unit Testing          | Challenging due to tight coupling.                | Easier due to separation of concerns.     |
 | Development Paradigm  | Event-driven                                      | Model-View-Controller (MVC) pattern.      |
 | Flexibility           | Less, due to server controls and ViewState.       | More, due to clean separation of concerns.|
