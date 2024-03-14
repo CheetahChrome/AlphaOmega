@@ -4,6 +4,7 @@ title: WebForms
 ---
 
 ### State Management
+
 | State Management Technique | Description |
 | - | - | 
 | ViewState | ViewState is a hidden field that is encoded and sent to the client browser along with the HTML markup. When the page is posted back to the server, the server can then decode the ViewState and restore the state of the page and its controls. |
