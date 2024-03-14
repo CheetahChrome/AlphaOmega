@@ -62,7 +62,10 @@ collections:
     permalink: "/:collection/:path/"
     output: true       
   Tech:
-    permalink: "/:collection/:path/"
+    permalink: "/:collection/:path/" 
+    output: true      
+  Frameworks:
+    permalink: "/:collection/:path/" 
     output: true       
 just_the_docs:
   collections:
@@ -79,5 +82,7 @@ just_the_docs:
     Node:
       name: Node.Js  
     Tech:
-      name: Tech       
+      name: Tech      
+    Frameworks:
+      name: Tech   
     
