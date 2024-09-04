@@ -14,6 +14,16 @@ layout: default
 | Interface Segregation Principle (ISP) | Printer | Interfaces | Clients should not be forced to depend on methods they do not use. |
 | Dependency Inversion Principle (DIP) | Delivery | Interface - Data Factory | High-level modules should not depend on low-level modules. Both should depend on abstractions. |
 
+
+| **SOLID Principle** | **Description** | **Related GoF Patterns** |
+|---------------------|-----------------|--------------------------|
+| Single Responsibility Principle (SRP) | A class should have only one reason to change, meaning it should have only one job or responsibility. | None directly, but promotes cohesion and separation of concerns. |
+| Open/Closed Principle (OCP) | Software entities should be open for extension but closed for modification. | Decorator, Strategy, Observer |
+| Liskov Substitution Principle (LSP) | Objects of a superclass should be replaceable with objects of a subclass without affecting the correctness of the program. | None directly, but promotes proper inheritance. |
+| Interface Segregation Principle (ISP) | Clients should not be forced to depend on interfaces they do not use. | None directly, but promotes the use of multiple, specific interfaces. |
+| Dependency Inversion Principle (DIP) | High-level modules should not depend on low-level modules. Both should depend on abstractions. | Abstract Factory, Factory Method, Dependency Injection |
+
+
 ## Single Responsibility Principle
 
 ```C#  
