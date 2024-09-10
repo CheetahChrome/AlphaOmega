@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Database Cosmos
+title: AWS Vs Azure
 ---
 
 | Azure                 | AWS                   | Details                                                                                       |
