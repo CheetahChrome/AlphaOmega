@@ -62,7 +62,7 @@ Default expressions| Allows setting a default value for a method parameter, simp
 ### C# 9
 
 | Feature| Description| Example|
-|---------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|---|-------|------|
 | Init-only properties| Allows properties to be set only during object initialization, using a new init keyword.| ```csharp class Point { public int X { get; init; } public int Y { get; init; } } Point p = new Point { X = 1, Y = 2 }; Console.WriteLine($"{p.X}, {p.Y}"); // Output: 1, 2```|
 | Top-level statements| Allows writing code at the top level of a file without needing to define a class or namespace.| ```csharp Console.WriteLine("Hello, World!");```|
 | Pattern matching enhancements| Adds new patterns to pattern matching, including simple type patterns, logical patterns, and more.| ```csharp object obj = "Hello, World!"; if (obj is not null and string { Length: 5 }) { Console.WriteLine("Match!"); }```|
@@ -74,3 +74,48 @@ Default expressions| Allows setting a default value for a method parameter, simp
 | Native integers| Adds new integer types that map directly to the hardware's native integer types, allowing for more efficient and predictable code.| ```csharp using System.Runtime.Intrinsics; using System.Runtime.Intrinsics.X86; bool CompareEqual(NativeVector<int> a, NativeVector<int> b) => Sse2.CompareEqual(a, b).AsByte().MoveMask() == 0b1111;``` |
 | Function pointers| Adds a new type, the function pointer type, allowing C-style function pointers to be used in C# code.| ```csharp delegate*<int, int> func = &MyFunction; int result = func(5); Console.WriteLine(result);```|
 
+
+### C# 10
+| Feature | Description | Example |
+|---|---:|---|
+| **Global using directives** | Declare `using` once for the project to avoid repeated imports. | `global using System.Text.Json;` |
+| **File-scoped namespace** | Removes nesting braces by declaring namespace for entire file. | `namespace MyApp;` |
+| **Constant interpolated strings** | `const` strings can use interpolation of other consts. | `const string Msg = $"{Prefix} world";` |
+| **Lambda improvements** | More concise lambda syntax and attributes on lambdas. | `Func<int,int> f = x => x * 2;` |
+| **Record structs** | Lightweight value-type records for immutable data. | `public record struct Point(int X,int Y);` |
+
+### C# 11
+| Feature | Description | Example |
+|---|---:|---|
+| **Raw string literals** | Multi-line strings with triple quotes and easier interpolation. | `var s = """Line "quoted" text"""`; |
+| **Generic math** | Interfaces and operators for numeric-generic algorithms. | `static T Add<T>(T a,T b) where T:INumber<T> => a + b;` |
+| **List and slice patterns** | Pattern-match arrays/lists and capture slices. | `if (arr is [1, .., 5]) ...` |
+| **UTF-8 string literals** | `u8` suffix produces `ReadOnlySpan<byte>` UTF-8 data. | `var b = "hi"u8;` |
+| **Required members** | Mark properties that must be set during initialization. | `public required string Name { get; init; }` |
+
+### C# 12
+| Feature | Description | Example |
+|---|---:|---|
+| **Primary constructors for all types** | Declare constructor parameters inline with the type. | `class Person(string name){ public string Name = name; }` |
+| **Collection expressions** | Unified `[ ... ]` syntax for arrays, lists, spans, with spread `..`. | `int[] a = [1,2, .. other];` |
+| **Inline arrays** | Fixed-size inline arrays for structs via attribute. | `[InlineArray(4)] struct Vec { int[] v; }` |
+| **Default lambda parameters** | Lambdas can have default parameter values. | `var g = (string n = "Guest") => $"Hi {n}";` |
+| **ref readonly parameters** | Clarify readonly reference parameters for APIs. | `void M(ref readonly MyStruct s) { }` |
+
+### C# 13
+| Feature | Description | Example |
+|---|---:|---|
+| **params collections** | `params` accepts spans and other collection types. | `void Add(params ReadOnlySpan<int> items) { }` |
+| **New lock type & semantics** | `System.Threading.Lock` with scope-based API recognized by `lock`. | `lock(myLock) { ... }` |
+| **Escape sequence `\e`** | New `\e` escape for ESC (U+001B). | `char esc = '\e';` |
+| **Implicit indexer access in initializers** | Use `^` (from-end) in object initializers. | `arr = [1,2,3, ^1 => 9];` |
+| **Partial properties & indexers** | Partial types can split property/indexer declarations. | `partial class C { partial int P { get; } }` |
+
+### C# 14
+| Feature | Description | Example |
+|---|---:|---|
+| **Extension members** | Extension **properties**, operators, and static extension members via `extension` block. | `extension(string s){ public int WordCount => s.Split().Length; }` |
+| **field contextual keyword** | Refer to compiler-generated backing field inside accessors with `field`. | `public string Name { get; set => field = value ?? ""; }` |
+| **Implicit span conversions** | Better first-class support and implicit conversions for `Span<T>`/`ReadOnlySpan<T>`. | `Span<char> s = "text".AsSpan();` |
+| **nameof supports unbound generics** | `nameof(List<>)` returns `"List"`. | `var n = nameof(List<>);` |
+| **Null-conditional assignment** | Left-side `?.` assignment to avoid null checks. | `obj?.Property = value;` |
