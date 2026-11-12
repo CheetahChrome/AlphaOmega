@@ -4,11 +4,9 @@ layout: default
 ---
 # Angular Interview Questions
 
-These notes reflect the current Angular documentation (v22, November 2026). The `NgModule` system and older testing setups still exist in legacy applications, but are not the default starting point for new Angular apps.
+These notes focus on modern Angular practices from v19 through the current v22 release (November 2026). The **Angular Versions** section summarizes earlier migration milestones and legacy patterns.
 
 ## Fundamentals
-
-### What is Angular?
 
 | Topic | Summary |
 |-------|---------|
@@ -16,7 +14,6 @@ These notes reflect the current Angular documentation (v22, November 2026). The 
 | Components and templates | `@Component` classes and HTML templates define UI views. |
 | Directives | `@Directive` types add behavior to elements or control rendering. |
 | Services | `@Injectable` classes provide reusable logic, state, or data access. |
-| Pipes | `@Pipe` defines a value transformation for templates. |
 | Dependency injection | `inject()` and configured providers supply dependencies to classes. |
 | Routing | `provideRouter()` configures routes that map URLs to views. |
 | Forms | `ReactiveFormsModule` or `FormsModule` capture and validate user input. |
@@ -28,13 +25,16 @@ These notes reflect the current Angular documentation (v22, November 2026). The 
 | Building block | Role and modern usage |
 |----------------|-----------------------|
 | Components | Own a view and its UI state. Standalone components import the dependencies their templates use. |
-| Directives | Attach behavior to elements; older structural directives can alter rendering. For new control flow, Angular provides `@if` and `@for` blocks. |
+| Directives | Attach reusable behavior to elements. Use Angular's built-in `@if` and `@for` blocks for conditional and repeated rendering. |
 | Services | Encapsulate reusable logic, state, or data access outside views. Provider scope controls sharing: `providedIn: 'root'` is app-wide, while component providers create local instances. |
 | Pipes | - Provide reusable template transformations, such as formatting.<br/> - Pure by default: rerun only when an input value changes; for objects or arrays, when the reference changes. |
 
 ### What is the Angular CLI?
 
 The Angular CLI creates and maintains projects, generates code, runs development builds and tests, and produces production builds. Common commands include `ng new`, `ng serve`, `ng generate`, `ng test`, and `ng build`.
+
+The Angular CLI creates and maintains projects, generates code, runs development builds and tests, and produces production builds. Common commands include `ng new`, `ng serve`, `ng generate`, `ng test`, and `ng build`.
+
 
 ## Components and Templates
 
@@ -44,10 +44,8 @@ The Angular CLI creates and maintains projects, generates code, runs development
 |-------|---------|
 | Standalone component | Can be used and bootstrapped without being declared in an `NgModule`. |
 | Template dependencies | Lists the components, directives, and pipes used by its template in the component's `imports`. |
-| Default behavior | Components are standalone by default starting in Angular 19. NgModules remain supported for existing applications and library integration. |
-
+| Default behavior | Components are standalone by default starting in Angular 19; existing `NgModule` declarations can be migrated incrementally. |
 ### What are Angular's binding types?
-
 | Binding | Code | Summary |
 |---------|------|---------|
 | Interpolation | <code>&#123;&#123; value &#125;&#125;</code> | Displays a value as text. |
@@ -62,7 +60,6 @@ The Angular CLI creates and maintains projects, generates code, runs development
 | `@if` / `@else` | Conditionally displays template content. |
 | `@for` | Repeats content for a collection; use a stable key such as `track item.id` to associate items with DOM nodes. |
 | `@switch` | Displays content for matching cases. |
-| Legacy syntax | `*ngIf` and `*ngFor` remain common in existing applications. |
 
 ### What are the key component lifecycle hooks?
 
@@ -124,7 +121,7 @@ Functional guards such as `CanActivateFn` control navigation and can return a bo
 
 ### When should you use Reactive Forms?
 
-Reactive Forms define an explicit form model with `FormControl`, `FormGroup`, or `FormArray`; they support synchronous validation, typed forms, and observable `valueChanges`. They are a strong fit for complex forms that need predictable state and testing. Angular also documents Signal Forms as a newer signal-based option.
+Reactive Forms define an explicit form model with `FormControl`, `FormGroup`, or `FormArray`; they support synchronous validation, typed forms, and observable `valueChanges`. They remain a strong fit for complex forms that need predictable state and testing. Signal Forms provide a signal-based alternative and are stable in Angular 22.
 
 ### How does Angular handle HTTP and interceptors?
 
@@ -138,7 +135,7 @@ Change detection is Angular's process for checking component bindings and updati
 
 ### What is `OnPush` change detection?
 
-`OnPush` lets Angular skip a component subtree until it receives a changed input, handles an event in that subtree, is explicitly marked for checking, or a signal read by its template changes. `OnPush` is the default strategy starting in Angular 22; older versions may require opting in with `ChangeDetectionStrategy.OnPush`.
+`OnPush` lets Angular skip a component subtree until it receives a changed input, handles an event in that subtree, is explicitly marked for checking, or a signal read by its template changes. `OnPush` is the default strategy starting in Angular 22.
 
 ### What are SSR and hydration?
 
@@ -148,10 +145,22 @@ Server-side rendering (SSR) sends rendered HTML from the server; prerendering ge
 
 ### What is a modern Angular testing strategy?
 
-Test behavior at the right level: unit-test pure logic and services, use `TestBed` for component and DOM interactions, and test routing and HTTP with Angular's testing utilities. New Angular CLI projects use `Vitest` by default; browser-based end-to-end testing can use tools such as `Playwright`. `Jasmine`/`Karma` projects are still found in existing applications, while `Protractor` is obsolete.
+Test behavior at the right level: unit-test pure logic and services, use `TestBed` for component and DOM interactions, and test routing and HTTP with Angular's testing utilities. New Angular CLI projects use `Vitest` by default; browser-based end-to-end testing can use tools such as `Playwright`.
+
+## Angular Versions
+
+| Version | Migration context |
+|---------|-------------------|
+| AngularJS 1.5.2 | This is AngularJS, a separate 1.x framework. Its `.component()` API, one-way `<` inputs, and `&` callback outputs encouraged component-based structure. AngularJS and modern Angular can coexist during an incremental migration using `@angular/upgrade`; their APIs are not interchangeable. |
+| Angular 15 | Standalone APIs became stable, making it practical to move feature by feature from `NgModule` declarations toward standalone components and provider-based application setup. |
+| Angular 16 | Introduced Signals in developer preview. This was the transition point for evaluating signal-based state alongside established RxJS streams. |
+| Angular 19 | Components, directives, and pipes became standalone by default. When migrating, declarations that remain in an `NgModule` need `standalone: false`; the Angular update schematic handles this transition. Signals are a core state primitive, while RxJS remains useful for asynchronous streams. |
+| Angular 20–22 | Continue updating with Angular's update guide and `ng update`. In v22, `OnPush` is the default change-detection strategy, Signal Forms are stable, and new CLI projects use `Vitest`. Move older templates using `*ngIf` / `*ngFor` toward built-in control flow; replace legacy Karma/Jasmine and Protractor setups as part of a planned testing migration. |
 
 ## Further Reading
 
+- [Angular versioning and updates](https://angular.dev/reference/releases) and the [Angular update guide](https://angular.dev/update-guide)
+- [AngularJS components](https://docs.angularjs.org/guide/component) and [Angular upgrade APIs](https://angular.dev/api/upgrade/static/UpgradeModule)
 - [Angular Signals](https://angular.dev/guide/signals) and [RxJS interop](https://angular.dev/ecosystem/rxjs-interop)
 - [Components and lifecycle](https://angular.dev/guide/components) and [template control flow](https://angular.dev/guide/templates/control-flow)
 - [Dependency injection](https://angular.dev/guide/di) and [routing](https://angular.dev/guide/routing)
