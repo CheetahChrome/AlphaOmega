@@ -41,13 +41,15 @@ The Angular CLI creates and maintains projects, generates code, runs development
 ### What is a standalone component?
 
 | Topic | Summary |
-|-------|---------|
+|-|-|
 | Standalone component | Can be used and bootstrapped without being declared in an `NgModule`. |
 | Template dependencies | Lists the components, directives, and pipes used by its template in the component's `imports`. |
 | Default behavior | Components are standalone by default starting in Angular 19; existing `NgModule` declarations can be migrated incrementally. |
+
 ### What are Angular's binding types?
+
 | Binding | Code | Summary |
-|---------|------|---------|
+| - |------|---------|
 | Interpolation | <code>&#123;&#123; value &#125;&#125;</code> | Displays a value as text. |
 | Property binding | `[value]="value"` | Binds an expression to a DOM or component property. |
 | Event binding | `(click)="save()"` | Calls a handler in response to an event. |
