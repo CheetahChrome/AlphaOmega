@@ -50,7 +50,7 @@ The Angular CLI creates and maintains projects, generates code, runs development
 
 | Binding | Code | Summary |
 |---------|------|---------|
-| Interpolation | `{{ value }}` | Displays a value as text. |
+| Interpolation | <code>&#123;&#123; value &#125;&#125;</code> | Displays a value as text. |
 | Property binding | `[value]="value"` | Binds an expression to a DOM or component property. |
 | Event binding | `(click)="save()"` | Calls a handler in response to an event. |
 | Two-way binding | `[(ngModel)]="name"` | Combines property and event binding to keep a value synchronized; `ngModel` is a directive, not a structural `*` directive. |
