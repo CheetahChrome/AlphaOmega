@@ -55,7 +55,7 @@ profile-card/
 |-- profile-card.ts
 |-- profile-card.html
 |-- profile-card.css
-`-- profile-card.spec.ts
+|-- profile-card.spec.ts
 ```
 
 | File | Purpose |
