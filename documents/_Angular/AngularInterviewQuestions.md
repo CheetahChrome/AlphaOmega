@@ -30,7 +30,7 @@ These notes reflect the current Angular documentation (v22, November 2026). NgMo
 | Components | Own a view and its UI state. Standalone components import the dependencies their templates use. |
 | Directives | Attach behavior to elements; older structural directives can alter rendering. For new control flow, Angular provides `@if` and `@for` blocks. |
 | Services | Encapsulate reusable logic, state, or data access outside views. Provider scope controls sharing: `providedIn: 'root'` is app-wide, while component providers create local instances. |
-| Pipes | Provide reusable template transformations, such as formatting. Pipes are pure by default and run when their inputs change. |
+| Pipes | - Provide reusable template transformations, such as formatting.<br/> - Pure by default: rerun only when an input value changes; for objects or arrays, when the reference changes. |
 
 ### What is the Angular CLI?
 
@@ -40,19 +40,39 @@ The Angular CLI creates and maintains projects, generates code, runs development
 
 ### What is a standalone component?
 
-Standalone components directly import the components, directives, and pipes their templates use, and can be bootstrapped without an NgModule. Components are standalone by default starting in Angular 19; NgModules remain supported for existing applications and library integration.
+| Topic | Summary |
+|-------|---------|
+| Standalone component | Can be used and bootstrapped without being declared in an NgModule. |
+| Template dependencies | Lists the components, directives, and pipes used by its template in the component's `imports`. |
+| Default behavior | Components are standalone by default starting in Angular 19. NgModules remain supported for existing applications and library integration. |
 
 ### What are Angular's binding types?
 
-Interpolation (`{{ value }}`) displays text; property binding (`[value]="value"`) sets a DOM or component property; event binding (`(click)="save()"`) responds to events; and two-way binding (`[(ngModel)]="name"`) combines input and output binding. `ngModel` is a directive, not a structural `*` directive.
+| Binding | Summary |
+|---------|---------|
+| Interpolation: `{{ value }}` | Displays a value as text. |
+| Property: `[value]="value"` | Binds an expression to a DOM or component property. |
+| Event: `(click)="save()"` | Calls a handler in response to an event. |
+| Two-way: `[(ngModel)]="name"` | Combines property and event binding to keep a value synchronized; `ngModel` is a directive, not a structural `*` directive. |
 
 ### What is Angular's built-in template control flow?
 
-Templates can use `@if` / `@else`, `@for`, and `@switch` blocks. Use a stable key such as `track item.id` with `@for` so Angular can efficiently associate data with rendered DOM nodes. The older `*ngIf` and `*ngFor` syntax remains common in existing code.
+| Block | Summary |
+|-------|---------|
+| `@if` / `@else` | Conditionally displays template content. |
+| `@for` | Repeats content for a collection; use a stable key such as `track item.id` to associate items with DOM nodes. |
+| `@switch` | Displays content for matching cases. |
+| Legacy syntax | `*ngIf` and `*ngFor` remain common in existing applications. |
 
 ### What are the key component lifecycle hooks?
 
-`ngOnChanges` runs when inputs change (and runs before the initial `ngOnInit`); `ngOnInit` runs once after initial inputs are set; `ngAfterViewInit` runs after the view is initialized; and `ngOnDestroy` runs before destruction. Use `afterNextRender` or `afterEveryRender` for work that must happen after rendering, such as browser DOM interaction.
+| Hook | Summary |
+|------|---------|
+| `ngOnChanges` | Runs when inputs change; the initial call occurs before `ngOnInit`. |
+| `ngOnInit` | Runs once after the initial inputs are set. |
+| `ngAfterViewInit` | Runs once after the component's view is initialized. |
+| `ngOnDestroy` | Runs once before the component is destroyed. |
+| `afterNextRender` / `afterEveryRender` | Register callbacks after rendering, useful for browser DOM work; these callbacks do not run during server-side rendering. |
 
 ## Signals and RxJS
 
