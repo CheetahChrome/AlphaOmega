@@ -1,10 +1,15 @@
+| Two-way binding | `[(ngModel)]="name"` | Combines property and event binding to keep a value synchronized; `ngModel` is a directive, not a structural `*` directive. |
+| HTTP client | `HttpClient` sends HTTP requests and returns `Observable`s. |
+| Default behavior | Components are standalone by default starting in Angular 19. `NgModule`s remain supported for existing applications and library integration. |
+| Two-way binding | `[(ngModel)]="name"` | Combines property and event binding to keep a value synchronized; `ngModel` is a directive, not a structural `*` directive. |
+### How do Signals compare with RxJS `Observable`s?
 ---
 title: Angular Interview Questions
 layout: default
 ---
 # Angular Interview Questions
 
-These notes reflect the current Angular documentation (v22, November 2026). NgModules and older testing setups still exist in legacy applications, but are not the default starting point for new Angular apps.
+These notes reflect the current Angular documentation (v22, November 2026). The `NgModule` system and older testing setups still exist in legacy applications, but are not the default starting point for new Angular apps.
 
 ## Fundamentals
 
@@ -42,18 +47,18 @@ The Angular CLI creates and maintains projects, generates code, runs development
 
 | Topic | Summary |
 |-------|---------|
-| Standalone component | Can be used and bootstrapped without being declared in an NgModule. |
+| Standalone component | Can be used and bootstrapped without being declared in an `NgModule`. |
 | Template dependencies | Lists the components, directives, and pipes used by its template in the component's `imports`. |
 | Default behavior | Components are standalone by default starting in Angular 19. NgModules remain supported for existing applications and library integration. |
 
 ### What are Angular's binding types?
 
-| Binding | Summary |
-|---------|---------|
-| Interpolation: `{{ value }}` | Displays a value as text. |
-| Property: `[value]="value"` | Binds an expression to a DOM or component property. |
-| Event: `(click)="save()"` | Calls a handler in response to an event. |
-| Two-way: `[(ngModel)]="name"` | Combines property and event binding to keep a value synchronized; `ngModel` is a directive, not a structural `*` directive. |
+| Binding | Code | Summary |
+|---------|------|---------|
+| Interpolation | `{{ value }}` | Displays a value as text. |
+| Property binding | `[value]="value"` | Binds an expression to a DOM or component property. |
+| Event binding | `(click)="save()"` | Calls a handler in response to an event. |
+| Two-way binding | `[(ngModel)]="name"` | Combines property and event binding to keep a value synchronized; `ngModel` is a directive, not a structural `*` directive. |
 
 ### What is Angular's built-in template control flow?
 
@@ -90,11 +95,11 @@ A writable signal exposes `.set()` and `.update()`. A computed signal is read-on
 
 ### How do Signals compare with RxJS Observables?
 
-Signals hold a synchronous current value and are useful for component state and derived values. Observables represent streams over time and provide operators for asynchronous work, cancellation, and event composition; Angular HTTP calls return Observables. Use the abstraction that fits the data flow rather than treating one as a replacement for the other.
+Signals hold a synchronous current value and are useful for component state and derived values. RxJS `Observable`s represent streams over time and provide operators for asynchronous work, cancellation, and event composition; Angular HTTP calls return `Observable`s. Use the abstraction that fits the data flow rather than treating one as a replacement for the other.
 
 ### How do Signals and RxJS work together?
 
-Angular's `@angular/core/rxjs-interop` provides `toSignal()` to read an Observable as a signal and `toObservable()` to expose a signal as an Observable. `toSignal()` subscribes immediately and cleans up with its owning context by default, so create it once and reuse it.
+Angular's `@angular/core/rxjs-interop` provides `toSignal()` to read an `Observable` as a signal and `toObservable()` to expose a signal as an `Observable`. `toSignal()` subscribes immediately and cleans up with its owning context by default, so create it once and reuse it.
 
 ## Dependency Injection
 
@@ -118,7 +123,7 @@ Use `loadComponent` to load a standalone component on demand, or `loadChildren` 
 
 ### What are route guards and resolvers?
 
-Functional guards such as `CanActivateFn` control navigation and can return a boolean, redirect, Promise, or Observable. Resolvers load essential data before route activation. Guards improve navigation and user experience; authorization must also be enforced on the server because client-side checks can be bypassed.
+Functional guards such as `CanActivateFn` control navigation and can return a boolean, redirect, `Promise`, or `Observable`. Resolvers load essential data before route activation. Guards improve navigation and user experience; authorization must also be enforced on the server because client-side checks can be bypassed.
 
 ## Forms and HTTP
 
@@ -128,7 +133,7 @@ Reactive Forms define an explicit form model with `FormControl`, `FormGroup`, or
 
 ### How does Angular handle HTTP and interceptors?
 
-Inject `HttpClient` to make typed HTTP requests; its methods return Observables, so requests execute when subscribed. Configure shared behavior with `provideHttpClient()` and functional interceptors via `withInterceptors()`. Interceptors can handle cross-cutting concerns such as authentication headers, logging, caching, and retry policy. Handle request failures in the Observable pipeline (for example, with `catchError`) and present useful error state to users.
+Inject `HttpClient` to make typed HTTP requests; its methods return `Observable`s, so requests execute when subscribed. Configure shared behavior with `provideHttpClient()` and functional interceptors via `withInterceptors()`. Interceptors can handle cross-cutting concerns such as authentication headers, logging, caching, and retry policy. Handle request failures in the `Observable` pipeline (for example, with `catchError`) and present useful error state to users.
 
 ## Performance
 
@@ -148,7 +153,7 @@ Server-side rendering (SSR) sends rendered HTML from the server; prerendering ge
 
 ### What is a modern Angular testing strategy?
 
-Test behavior at the right level: unit-test pure logic and services, use `TestBed` for component and DOM interactions, and test routing and HTTP with Angular's testing utilities. New Angular CLI projects use Vitest by default; browser-based end-to-end testing can use tools such as Playwright. Jasmine/Karma projects are still found in existing applications, while Protractor is obsolete.
+Test behavior at the right level: unit-test pure logic and services, use `TestBed` for component and DOM interactions, and test routing and HTTP with Angular's testing utilities. New Angular CLI projects use `Vitest` by default; browser-based end-to-end testing can use tools such as `Playwright`. `Jasmine`/`Karma` projects are still found in existing applications, while `Protractor` is obsolete.
 
 ## Further Reading
 
