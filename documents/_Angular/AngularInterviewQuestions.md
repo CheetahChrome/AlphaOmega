@@ -10,11 +10,27 @@ These notes reflect the current Angular documentation (v22, November 2026). NgMo
 
 ### What is Angular?
 
-Angular is a TypeScript-based web application framework. It includes components and templates, dependency injection, routing, forms, HTTP services, and the Angular CLI.
+| Topic | Summary |
+|-------|---------|
+| Framework | Angular is a TypeScript-based web application framework. |
+| Components and templates | `@Component` classes and HTML templates define UI views. |
+| Directives | `@Directive` types add behavior to elements or control rendering. |
+| Services | `@Injectable` classes provide reusable logic, state, or data access. |
+| Pipes | `@Pipe` defines a value transformation for templates. |
+| Dependency injection | `inject()` and configured providers supply dependencies to classes. |
+| Routing | `provideRouter()` configures routes that map URLs to views. |
+| Forms | `ReactiveFormsModule` or `FormsModule` capture and validate user input. |
+| HTTP client | `HttpClient` sends HTTP requests and returns Observables. |
+| Angular CLI | The `ng` CLI creates, serves, tests, and builds Angular applications. |
 
 ### What are components, directives, services, and pipes?
 
-Components define UI views using a TypeScript class and a template. Directives add behavior to elements or control rendering. Services hold reusable application logic or data access. Pipes transform values for display in templates.
+| Building block | Role and modern usage |
+|----------------|-----------------------|
+| Components | Own a view and its UI state. Standalone components import the dependencies their templates use. |
+| Directives | Attach behavior to elements; older structural directives can alter rendering. For new control flow, Angular provides `@if` and `@for` blocks. |
+| Services | Encapsulate reusable logic, state, or data access outside views. Provider scope controls sharing: `providedIn: 'root'` is app-wide, while component providers create local instances. |
+| Pipes | Provide reusable template transformations, such as formatting. Pipes are pure by default and run when their inputs change. |
 
 ### What is the Angular CLI?
 
