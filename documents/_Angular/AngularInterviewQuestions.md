@@ -46,6 +46,25 @@ The Angular CLI creates and maintains projects, generates code, runs development
 | Template dependencies | Lists the components, directives, and pipes used by its template in the component's `imports`. |
 | Default behavior | Components are standalone by default starting in Angular 19; existing `NgModule` declarations can be migrated incrementally. |
 
+### What files make up a component?
+
+A typical component's TypeScript, template, stylesheet, and test files are grouped together in one feature directory:
+
+```text
+profile-card/
+|-- profile-card.ts
+|-- profile-card.html
+|-- profile-card.css
+`-- profile-card.spec.ts
+```
+
+| File | Purpose |
+|------|---------|
+| `profile-card.ts` | Defines the component class and its `@Component` metadata, including the template and stylesheet references. |
+| `profile-card.html` | Defines the component's template and rendered UI. |
+| `profile-card.css` | Defines styles scoped to the component. |
+| `profile-card.spec.ts` | Tests the component's behavior and rendering. |
+
 ### What are Angular's binding types?
 
 | Binding | Code | Summary |
