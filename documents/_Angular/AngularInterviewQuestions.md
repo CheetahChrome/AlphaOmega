@@ -1,8 +1,3 @@
-| Two-way binding | `[(ngModel)]="name"` | Combines property and event binding to keep a value synchronized; `ngModel` is a directive, not a structural `*` directive. |
-| HTTP client | `HttpClient` sends HTTP requests and returns `Observable`s. |
-| Default behavior | Components are standalone by default starting in Angular 19. `NgModule`s remain supported for existing applications and library integration. |
-| Two-way binding | `[(ngModel)]="name"` | Combines property and event binding to keep a value synchronized; `ngModel` is a directive, not a structural `*` directive. |
-### How do Signals compare with RxJS `Observable`s?
 ---
 title: Angular Interview Questions
 layout: default
